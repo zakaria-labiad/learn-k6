@@ -1,7 +1,7 @@
 import http from "k6/http";
 import { sleep, check } from "k6";
 
-const HOST = __ENV.K6_HOST || "host.docker.internal";
+const HOST = __ENV.K6_HOST || "127.0.0.1;
 const PORT = __ENV.PORT || "3000";
 
 export const options = {
