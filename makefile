@@ -1,4 +1,5 @@
 install:
+	npm install
 	npm ci
 	
 run:
