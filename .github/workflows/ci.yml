@@ -33,6 +33,12 @@ jobs:
           make start &
           sleep 5
 
+      - name: Check k6 files
+        run: |
+          pwd
+          ls -la
+          ls -la scripts
+
       - name: Run k6 performance tests
         id: k6_test
         continue-on-error: true

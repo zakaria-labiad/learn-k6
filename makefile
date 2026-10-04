@@ -14,5 +14,5 @@ k6:
 		-e PORT \
 		-e K6_VUS \
 		-e K6_DURATION \
-		-v "$(PWD)/scripts:/scripts" \
+		-v "$(CURDIR)/scripts:/scripts" \
 		grafana/k6 run /scripts/k6.ts
