@@ -6,7 +6,7 @@ import router from "./routes/index";
 import logger from "./utils/logger";
 
 const app = express();
-const HoST = process.env.HOST || "localhost";
+const HoST = process.env.HOST || "127.0.0.1";
 const PORT = process.env.PORT || 3000;
 
 app.use(morgan("dev"));
