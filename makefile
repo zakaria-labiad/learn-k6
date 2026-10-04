@@ -10,6 +10,7 @@ test:
 
 k6:
 	docker run --rm \
+		--network host \
 		-e K6_HOST \
 		-e PORT \
 		-e K6_VUS \

@@ -33,20 +33,21 @@ jobs:
           make start &
           sleep 5
 
+      - name: Check application
+        run: curl -f http://127.0.0.1:3000/api/cubes
+
       - name: Check k6 files
         run: |
           pwd
           ls -la
           ls -la scripts
 
-      - name: Run k6 performance tests
-        id: k6_test
-        continue-on-error: true
+      - name: Run k6
         env:
-          K6_HOST: ${{ secrets.K6_HOST }}
-          PORT: ${{ secrets.PORT }}
-          K6_VUS: ${{ secrets.K6_VUS }}
-          K6_DURATION: ${{ secrets.K6_DURATION }}
+          K6_HOST: http://127.0.0.1
+          PORT: 3000
+          K6_VUS: 10
+          K6_DURATION: 10s
         run: make k6
 
       - name: Performance test failed
