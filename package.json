@@ -1,0 +1,37 @@
+{
+  "name": "k6",
+  "version": "1.0.0",
+  "description": "A simple app to learn k6",
+  "keywords": [
+    "k6"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "learn-k6"
+  },
+  "license": "ISC",
+  "author": "Zakaria Labiad",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "k6": "k6 run scripts/k6.ts",
+    "test": "echo \"No tests configured\""
+  },
+  "dependencies": {
+    "dotenv": "^18.0.5",
+    "express": "^5.2.1",
+    "morgan": "^1.12.1",
+    "winston": "^3.19.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/k6": "^2.3.0",
+    "@types/morgan": "^1.9.10",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  }
+}
+  
