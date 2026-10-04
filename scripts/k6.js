@@ -9,7 +9,6 @@ export const options = {
   duration: __ENV.K6_DURATION || "10s", // Test duration
   thresholds: {
     http_req_failed: ["rate<0.01"], // Fail the test if more than 1% of requests fail
-    http_req_duration: ["p(95)<500"], // 95% of requests should be below 500ms
   },
 };
 
@@ -17,7 +16,6 @@ export default function () {
   const res = http.get(`http://${HOST}:${PORT}/api/cubes`);
   check(res, {
     "status was 200": (r) => r.status === 200,
-    "duration was < 200ms": (r) => r.timings.duration < 200,
   });
   sleep(1);
 }

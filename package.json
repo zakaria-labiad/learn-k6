@@ -14,9 +14,9 @@
   "type": "module",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "tsx watch src/index.ts",
+    "dev": "tsx watch src/index.js",
     "start": "node dist/index.js",
-    "k6": "k6 run scripts/k6.ts",
+    "k6": "k6 run scripts/k6.js",
     "test": "echo \"No tests configured\""
   },
   "dependencies": {
