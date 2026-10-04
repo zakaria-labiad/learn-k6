@@ -15,4 +15,4 @@ k6:
 		-e K6_VUS \
 		-e K6_DURATION \
 		-v "$(CURDIR)/scripts:/scripts" \
-		grafana/k6 run /scripts/k6.ts
+		grafana/k6 run /scripts/k6.js
