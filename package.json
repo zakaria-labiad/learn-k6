@@ -15,7 +15,6 @@
   "main": "dist/index.js",
   "scripts": {
     "dev": "tsx watch src/index.ts",
-    "build": "tsc",
     "start": "node dist/index.js",
     "k6": "k6 run scripts/k6.ts",
     "test": "echo \"No tests configured\""
@@ -34,4 +33,3 @@
     "typescript": "^5.9.0"
   }
 }
-  
